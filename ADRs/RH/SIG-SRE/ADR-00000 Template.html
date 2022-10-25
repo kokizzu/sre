@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>ADR-00001 Document architecture decisions using the Architecture Decision Records approach and define their templates &#8212; Operate First - Site Reliability Engineering</title>
+    <title>ADR-00000 Template &#8212; Operate First - Site Reliability Engineering</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="ADR-00002 Personas related to Managed Services" href="ADR-00002%20Personas%20related%20to%20Managed%20Services.html" />
-    <link rel="prev" title="ADR-00000 Template" href="ADR-00000%20Template.html" />
+    <link rel="next" title="ADR-00001 Document architecture decisions using the Architecture Decision Records approach and define their templates" href="ADR-00001%20Document%20architecture%20decisions%20using%20the%20Architecture%20Decision%20Records%20approach%20and%20define%20their%20templates.html" />
+    <link rel="prev" title="RH" href="../README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -110,7 +110,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../../README.html">
-                    Operate First - Site Reliability Engineering
+                    SIG-SRE — the Operate First Site Reliability Engineering Special Interest Group
                 </a>
             </li>
         </ul>
@@ -133,6 +133,21 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../../../process/incident_management.html">
    Incident Management Process
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../sig-roadmap.html">
+   SIG SRE roadmap
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../CONTRIBUTING.html">
+   Contributing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../charter.html">
+   Charter
   </a>
  </li>
 </ul>
@@ -165,8 +180,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="README.html">
-   SIG-SRE
+  <a class="reference internal" href="../README.html">
+   RH
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -174,13 +189,13 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="ADR-00000%20Template.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      ADR-00000 Template
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="ADR-00001%20Document%20architecture%20decisions%20using%20the%20Architecture%20Decision%20Records%20approach%20and%20define%20their%20templates.html">
      ADR-00001 Document architecture decisions using the Architecture Decision Records approach and define their templates
     </a>
    </li>
@@ -207,6 +222,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="ADR-00007-Error-Budget-Policy.html">
      ADR-00007 Error Budget Policy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="README.html">
+     SIG-SRE
     </a>
    </li>
   </ul>
@@ -313,7 +333,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/operate-first/sre/issues/new?title=Issue%20on%20page%20%2FADRs/RH/SIG-SRE/ADR-00001 Document architecture decisions using the Architecture Decision Records approach and define their templates.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/operate-first/sre/issues/new?title=Issue%20on%20page%20%2FADRs/RH/SIG-SRE/ADR-00000 Template.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -341,7 +361,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../_sources/ADRs/RH/SIG-SRE/ADR-00001 Document architecture decisions using the Architecture Decision Records approach and define their templates.md"
+        <a href="../../../_sources/ADRs/RH/SIG-SRE/ADR-00000 Template.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -429,13 +449,6 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#proposed-architecture">
    Proposed Architecture
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adr-status-fields">
-     ADR Status Fields
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#challenges">
@@ -462,11 +475,6 @@ title="Print to PDF"
    Consequences if Not Completed
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#review-status">
-   Review Status
-  </a>
- </li>
 </ul>
 
     </nav>
@@ -476,7 +484,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>ADR-00001 Document architecture decisions using the Architecture Decision Records approach and define their templates</h1>
+                <h1>ADR-00000 Template</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -515,13 +523,6 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#proposed-architecture">
    Proposed Architecture
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adr-status-fields">
-     ADR Status Fields
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#challenges">
@@ -548,11 +549,6 @@ title="Print to PDF"
    Consequences if Not Completed
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#review-status">
-   Review Status
-  </a>
- </li>
 </ul>
 
                         </nav>
@@ -563,118 +559,78 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="adr-00001-document-architecture-decisions-using-the-architecture-decision-records-approach-and-define-their-templates">
-<h1>ADR-00001 Document architecture decisions using the Architecture Decision Records approach and define their templates<a class="headerlink" href="#adr-00001-document-architecture-decisions-using-the-architecture-decision-records-approach-and-define-their-templates" title="Permalink to this headline">#</a></h1>
-<p>Authors: Jeremy Eder</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="adr-00000-template">
+<h1>ADR-00000 Template<a class="headerlink" href="#adr-00000-template" title="Permalink to this headline">#</a></h1>
+<p>Authors:</p>
 <section id="status">
 <h2>Status<a class="headerlink" href="#status" title="Permalink to this headline">#</a></h2>
-<p>Draft</p>
+<p>&lt;<em>Draft, Proposed, Reviewing, Accepted, Rejected, Superseded</em>&gt;</p>
 </section>
 <section id="problem-statement">
 <h2>Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">#</a></h2>
-<p>We need to capture our architecture decisions for all of Red Hat’s SIG-SRE and consumers. This capture should make it easy for people to find a given decision and refer to it. The decision context should be captured so we can question that decision when changes arise.</p>
+<p>&lt;<em>Why does this ADR exist? What decision are you trying to reach?</em>&gt;</p>
 </section>
 <section id="goals">
 <h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Capture key decisions</p></li>
-<li><p>Let the team rely on these decisions</p></li>
-<li><p>Capture decision context so we can revisit when context changes</p></li>
-<li><p>Be easily discoverable</p></li>
+<li><p>&lt;<em>Clearly list the goals which this work will try to achieve.</em>&gt;</p></li>
+<li><p>&lt;<em>The goals should be achievable, not visionary statements.</em>&gt;</p></li>
 </ul>
 </section>
 <section id="non-goals">
 <h2>Non-goals<a class="headerlink" href="#non-goals" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Does not aim at achieving perfection from the get go</p></li>
+<li><p>&lt;<em>If any of the goals might be interpreted too broadly, here’s where you limit their scope.</em>&gt;</p></li>
 </ul>
 </section>
 <section id="current-architecture">
 <h2>Current Architecture<a class="headerlink" href="#current-architecture" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>None</p></li>
+<li><p>&lt;<em>If something is already solving the problem (even partially), here’s where you mention it.</em>&gt;</p></li>
 </ul>
 </section>
 <section id="proposed-architecture">
 <h2>Proposed Architecture<a class="headerlink" href="#proposed-architecture" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Embrace a well formed template for each Architecture Decision</p>
-<ul>
-<li><p><a class="reference internal" href="ADR-00000%20Template.html"><span class="doc std std-doc">[Template] Architecture Decision Record</span></a></p></li>
+<li><p>&lt;<em>Present a high level overview of the proposed solution.</em>&gt;</p></li>
+<li><p>&lt;<em>Make it concise and simple; put diagrams; be concrete, avoid using vague generalizations.</em>&gt;</p></li>
 </ul>
-</li>
-<li><p>Store each Architecture Decision Record (ADR) in <a class="reference external" href="https://github.com/operate-first/sre/tree/main/ADRs/RH/SIG-SRE">Operate First’s SRE repository</a>.</p></li>
-<li><p>Each Architecture Decision Record is named “ADR-nnnnn Some title”</p>
-<ul>
-<li><p>nnnnn is a quasi monotonic number assigned at ADR creation time</p></li>
-</ul>
-</li>
-<li><p>ADRs are immutable once their status moves to accepted</p></li>
-<li><p>ADRs can supersede preceding ADRs: this is how a decision is changed.</p></li>
-<li><p>No ADR once moved past Draft can be ‘deleted’ or ‘removed’.</p></li>
-<li><p>Drafts can be developed as pull requests or using gdocs. However once they reach Proposed, they must become PRs against the ADR repository.</p></li>
-</ul>
-<section id="adr-status-fields">
-<h3>ADR Status Fields<a class="headerlink" href="#adr-status-fields" title="Permalink to this headline">#</a></h3>
-<p>Expected life cycle for each ADR will be as follows:</p>
-<ol class="simple">
-<li><p><strong>Draft</strong>: An ADR in Draft indicates its a concept under consideration, being scoped, being written up. No action is expected from anyone other than the author, and there are no time pressures towards moving from the draft state.</p></li>
-<li><p><strong>Proposed</strong>: ADRs can move to the proposed state once a sponsor has signed up, and the ADR can then start to be socialized within the team / with PMs and with RFCs / RFEs can be scoped in.</p></li>
-<li><p><strong>Reviewing</strong>: Once moved to Reviewing state, the ADR must be brought to the SIG-SRE weekly call for consideration based on feedback already received. An ADR from this stage can either be moved back to the Proposed state, if gaps are identified or conversations need to be closed, or is Accepted / Rejected. And actions as follow-up should be executed.</p></li>
-<li><p><strong>Accepted</strong>: Once an ADR is ‘accepted’, it must be moved into read-only mode and no further changes are allowed.</p></li>
-<li><p><strong>Rejected</strong>: From the reviewing state, it’s possible to move ADRs to a rejected state if they do not align with goals, or if stakeholders have fundamental concerns.</p></li>
-<li><p><strong>Superseded</strong>: ADRs once they move to Accepted state can no longer be changed, since goals and execution is established. Changes would be implemented by replacement ADRs with the previous ADR being moved to ‘superseded’ state, and a comment being added into the ADR metadata itself indicating which ADR now supersedes this specific one. The general pattern to follow is the IETF RFC flow.</p></li>
-</ol>
-</section>
 </section>
 <section id="challenges">
 <h2>Challenges<a class="headerlink" href="#challenges" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Each existing decisions should be identified and recaptured as Architecture Decision Records (ADR)</p></li>
-<li><p>Since ADRs are numbered at creation time, it is possible that an ADR with a higher number is in effect before an ADR with a lower number. Shouldn’t be a problem as long as they don’t contradict (nor supersede) one another.</p></li>
+<li><p>&lt;<em>Call out any challenges here, e.g. upskilling needed, specific resources needed, very aggressive timelines if known, etc.</em>&gt;</p></li>
 </ul>
 </section>
 <section id="alternatives-considered">
 <h2>Alternatives Considered<a class="headerlink" href="#alternatives-considered" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Google doc free form documents: are hard to be versioned, searched and made to be immutable</p></li>
+<li><p>&lt;<em>Were any other approaches to solving the issue considered? If yes, describe them here.</em>&gt;</p></li>
+<li><p>&lt;<em>Focus on the differences in outcomes (both positive and negative) between the proposed architecture and the alternatives.</em>&gt;</p></li>
 </ul>
 </section>
 <section id="dependencies">
 <h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="ADR-00000%20Template.html"><span class="doc std std-doc">[Template] Architecture Decision Record</span></a></p></li>
-<li><p>Architecture Decision Records directory</p></li>
-<li><p>Some materials on the concept of ADR</p>
-<ul>
-<li><p><a class="reference external" href="https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions.html">https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions.html</a></p></li>
-<li><p><a class="reference external" href="https://adr.github.io/">https://adr.github.io/</a></p></li>
-<li><p><a class="reference external" href="https://adr.github.io/madr/">https://adr.github.io/madr/</a></p></li>
-<li><p><a class="reference external" href="https://engineering.atspotify.com/2020/04/14/when-should-i-write-an-architecture-decision-record/">https://engineering.atspotify.com/2020/04/14/when-should-i-write-an-architecture-decision-record/</a></p></li>
-<li><p>Note that we are deviating from these descriptions in some areas (including the template)</p></li>
-</ul>
-</li>
+<li><p>&lt;<em>Does this proposal depend on other things also being in place? List them.</em>&gt;</p></li>
 </ul>
 </section>
 <section id="stakeholders">
 <h2>Stakeholders<a class="headerlink" href="#stakeholders" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>SIG-SRE and other SRE and engineering teams contributing to these ADRs will consume (and generate) these Architecture Decision Records</p></li>
-<li><p>Engineering Management and Product Management personas putting requirements on SRE teams</p></li>
-<li><p>SIG-SRE workstream leads are the caretakers of these Architecture Decision Records and are Approvers of all ADR PRs</p></li>
+<li><p>&lt;<em>Who needs to sign off on this proposal for it to be implementable?</em>&gt;</p>
+<ul>
+<li><p>&lt;<em>Since SIG-SRE ADRs impact how the SIG operates, the default set of stakeholders would consist of relevant SIG-SRE members (plus external stakeholders, if any).</em>&gt;</p></li>
+</ul>
+</li>
 </ul>
 </section>
 <section id="consequences-if-not-completed">
 <h2>Consequences if Not Completed<a class="headerlink" href="#consequences-if-not-completed" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Ad-hoc decision recording that might be hard to find</p></li>
-<li><p>Non-decisions slowing down the team progress</p></li>
+<li><p>&lt;<em>What happens if this proposal is not accepted and implemented?</em>&gt;</p></li>
+<li><p>&lt;<em>Start with immediate consequences, don’t base your argument on what you think might happen 5 years from now.</em></p></li>
 </ul>
-</section>
-<section id="review-status">
-<h2>Review Status<a class="headerlink" href="#review-status" title="Permalink to this headline">#</a></h2>
-<p>Proposition is circulated to internal stakeholders.</p>
-<p>Status to converge within a week to accept unless concerns are arisen.</p>
 </section>
 </section>
 
@@ -705,17 +661,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="ADR-00000%20Template.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../README.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">ADR-00000 Template</p>
+            <p class="prev-next-title">RH</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="ADR-00002%20Personas%20related%20to%20Managed%20Services.html" title="next page">
+    <a class='right-next' id="next-link" href="ADR-00001%20Document%20architecture%20decisions%20using%20the%20Architecture%20Decision%20Records%20approach%20and%20define%20their%20templates.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ADR-00002 Personas related to Managed Services</p>
+        <p class="prev-next-title">ADR-00001 Document architecture decisions using the Architecture Decision Records approach and define their templates</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

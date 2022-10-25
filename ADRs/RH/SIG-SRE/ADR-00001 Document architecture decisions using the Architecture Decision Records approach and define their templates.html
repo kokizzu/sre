@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>ADR-00005 SLO Lifecycle &#8212; Operate First - Site Reliability Engineering</title>
+    <title>ADR-00001 Document architecture decisions using the Architecture Decision Records approach and define their templates &#8212; Operate First - Site Reliability Engineering</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="ADR-00006 SLO RACI Chart" href="ADR-00006%20SLO%20RACI%20Chart.html" />
-    <link rel="prev" title="ADR-00004 - Chaos Testing &amp; Engineering" href="ADR-00004-Chaos-Testing-and-Engineering.html" />
+    <link rel="next" title="ADR-00002 Personas related to Managed Services" href="ADR-00002%20Personas%20related%20to%20Managed%20Services.html" />
+    <link rel="prev" title="ADR-00000 Template" href="ADR-00000%20Template.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -110,7 +110,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../../README.html">
-                    Operate First - Site Reliability Engineering
+                    SIG-SRE — the Operate First Site Reliability Engineering Special Interest Group
                 </a>
             </li>
         </ul>
@@ -133,6 +133,21 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../../../process/incident_management.html">
    Incident Management Process
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../sig-roadmap.html">
+   SIG SRE roadmap
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../CONTRIBUTING.html">
+   Contributing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../charter.html">
+   Charter
   </a>
  </li>
 </ul>
@@ -165,8 +180,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="README.html">
-   SIG-SRE
+  <a class="reference internal" href="../README.html">
+   RH
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -179,8 +194,8 @@ const thebe_selector_output = ".output, .cell_output"
      ADR-00000 Template
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ADR-00001%20Document%20architecture%20decisions%20using%20the%20Architecture%20Decision%20Records%20approach%20and%20define%20their%20templates.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      ADR-00001 Document architecture decisions using the Architecture Decision Records approach and define their templates
     </a>
    </li>
@@ -194,8 +209,8 @@ const thebe_selector_output = ".output, .cell_output"
      ADR-00004 - Chaos Testing &amp; Engineering
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="ADR-00005%20SLO%20Lifecycle.html">
      ADR-00005 SLO Lifecycle
     </a>
    </li>
@@ -207,6 +222,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="ADR-00007-Error-Budget-Policy.html">
      ADR-00007 Error Budget Policy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="README.html">
+     SIG-SRE
     </a>
    </li>
   </ul>
@@ -313,7 +333,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/operate-first/sre/issues/new?title=Issue%20on%20page%20%2FADRs/RH/SIG-SRE/ADR-00005 SLO Lifecycle.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/operate-first/sre/issues/new?title=Issue%20on%20page%20%2FADRs/RH/SIG-SRE/ADR-00001 Document architecture decisions using the Architecture Decision Records approach and define their templates.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -341,7 +361,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../_sources/ADRs/RH/SIG-SRE/ADR-00005 SLO Lifecycle.md"
+        <a href="../../../_sources/ADRs/RH/SIG-SRE/ADR-00001 Document architecture decisions using the Architecture Decision Records approach and define their templates.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -416,6 +436,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#non-goals">
+   Non-goals
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#current-architecture">
    Current Architecture
   </a>
@@ -426,38 +451,9 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#research-phase">
-     Research Phase
+    <a class="reference internal nav-link" href="#adr-status-fields">
+     ADR Status Fields
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#implementation-phase">
-     Implementation Phase
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#iteration-phase">
-     Iteration Phase
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#slo-review">
-       SLO Review
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#remediating-slos">
-         Remediating SLOs
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#sprint-planning-hooks">
-       Sprint Planning Hooks
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -465,13 +461,11 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#challenges">
    Challenges
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#permissive-slo-phase">
-     Permissive SLO Phase
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#alternatives-considered">
+   Alternatives Considered
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dependencies">
@@ -488,6 +482,11 @@ title="Print to PDF"
    Consequences if Not Completed
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review-status">
+   Review Status
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -497,7 +496,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>ADR-00005 SLO Lifecycle</h1>
+                <h1>ADR-00001 Document architecture decisions using the Architecture Decision Records approach and define their templates</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -523,6 +522,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#non-goals">
+   Non-goals
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#current-architecture">
    Current Architecture
   </a>
@@ -533,38 +537,9 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#research-phase">
-     Research Phase
+    <a class="reference internal nav-link" href="#adr-status-fields">
+     ADR Status Fields
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#implementation-phase">
-     Implementation Phase
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#iteration-phase">
-     Iteration Phase
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#slo-review">
-       SLO Review
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#remediating-slos">
-         Remediating SLOs
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#sprint-planning-hooks">
-       Sprint Planning Hooks
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -572,13 +547,11 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#challenges">
    Challenges
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#permissive-slo-phase">
-     Permissive SLO Phase
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#alternatives-considered">
+   Alternatives Considered
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dependencies">
@@ -595,6 +568,11 @@ title="Print to PDF"
    Consequences if Not Completed
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review-status">
+   Review Status
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -605,168 +583,118 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="adr-00005-slo-lifecycle">
-<h1>ADR-00005 SLO Lifecycle<a class="headerlink" href="#adr-00005-slo-lifecycle" title="Permalink to this headline">#</a></h1>
-<p>Authors: Lisa Seelye &lt;&#64;lisa&gt;, Jeremy Eder</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="adr-00001-document-architecture-decisions-using-the-architecture-decision-records-approach-and-define-their-templates">
+<h1>ADR-00001 Document architecture decisions using the Architecture Decision Records approach and define their templates<a class="headerlink" href="#adr-00001-document-architecture-decisions-using-the-architecture-decision-records-approach-and-define-their-templates" title="Permalink to this headline">#</a></h1>
+<p>Authors: Jeremy Eder</p>
 <section id="status">
 <h2>Status<a class="headerlink" href="#status" title="Permalink to this headline">#</a></h2>
 <p>Draft</p>
 </section>
 <section id="problem-statement">
 <h2>Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">#</a></h2>
-<p>A primary goal of Service Level Objectives is to inform the natural cycle of work for product feature teams by adding an additional signal for use in planning work.</p>
-<p>There are a number of complex processes and <a class="reference external" href="https://github.com/operate-first/sre/blob/main/ADRs/RH/SIG-SRE/ADR-00002%20Personas%20related%20to%20Managed%20Services.md">personas</a> that play different roles in the successful implementation of an SLO. One hurdle some teams encounter with creating SLOs for their services is the absence of a guide to show the steps for getting started.</p>
-<p>Quantifying the user experience is difficult because user experience can so often be subjective, and therefor hard to measure. Service level objectives seek to provide an objective way to measure the customer experience; the goal of the SLO is to provide a consistently high customer experience. The assumption is that when a service is reliable enough, then its customers will be happy.</p>
-<p>This document aims to provide a base on top of which teams can build a successful SLO implementation.</p>
+<p>We need to capture our architecture decisions for all of Red Hat’s SIG-SRE and consumers. This capture should make it easy for people to find a given decision and refer to it. The decision context should be captured so we can question that decision when changes arise.</p>
 </section>
 <section id="goals">
 <h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>The guide is generic enough to be used by any service as-is.</p></li>
-<li><p>The guide doesn’t prevent anyone from taking it and tweaking it to their needs.</p></li>
+<li><p>Capture key decisions</p></li>
+<li><p>Let the team rely on these decisions</p></li>
+<li><p>Capture decision context so we can revisit when context changes</p></li>
+<li><p>Be easily discoverable</p></li>
+</ul>
+</section>
+<section id="non-goals">
+<h2>Non-goals<a class="headerlink" href="#non-goals" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Does not aim at achieving perfection from the get go</p></li>
 </ul>
 </section>
 <section id="current-architecture">
 <h2>Current Architecture<a class="headerlink" href="#current-architecture" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Various ad-hoc practices, where they already exist.</p></li>
+<li><p>None</p></li>
 </ul>
 </section>
 <section id="proposed-architecture">
 <h2>Proposed Architecture<a class="headerlink" href="#proposed-architecture" title="Permalink to this headline">#</a></h2>
-<p>Add Service Level Objectives (SLOs) with their own distinct lifecycle described herein. The PM will be accountable for the SLO feature.</p>
-<p>Break down the SLO lifecycle into three phases:</p>
+<ul class="simple">
+<li><p>Embrace a well formed template for each Architecture Decision</p>
+<ul>
+<li><p><a class="reference internal" href="ADR-00000%20Template.html"><span class="doc std std-doc">[Template] Architecture Decision Record</span></a></p></li>
+</ul>
+</li>
+<li><p>Store each Architecture Decision Record (ADR) in <a class="reference external" href="https://github.com/operate-first/sre/tree/main/ADRs/RH/SIG-SRE">Operate First’s SRE repository</a>.</p></li>
+<li><p>Each Architecture Decision Record is named “ADR-nnnnn Some title”</p>
+<ul>
+<li><p>nnnnn is a quasi monotonic number assigned at ADR creation time</p></li>
+</ul>
+</li>
+<li><p>ADRs are immutable once their status moves to accepted</p></li>
+<li><p>ADRs can supersede preceding ADRs: this is how a decision is changed.</p></li>
+<li><p>No ADR once moved past Draft can be ‘deleted’ or ‘removed’.</p></li>
+<li><p>Drafts can be developed as pull requests or using gdocs. However once they reach Proposed, they must become PRs against the ADR repository.</p></li>
+</ul>
+<section id="adr-status-fields">
+<h3>ADR Status Fields<a class="headerlink" href="#adr-status-fields" title="Permalink to this headline">#</a></h3>
+<p>Expected life cycle for each ADR will be as follows:</p>
 <ol class="simple">
-<li><p><a class="reference external" href="#research-phase">Research</a> (where SLO ideation and gap analysis takes place)</p></li>
-<li><p><a class="reference external" href="#implementation-phase">Implementation</a> (where one Implements any required technical and process changes)</p></li>
-<li><p><a class="reference external" href="#iteration-phase">Iteration</a> (where one begins living with the SLO and where one may decide on improvements or changes to the SLO based on real world experience)</p></li>
+<li><p><strong>Draft</strong>: An ADR in Draft indicates its a concept under consideration, being scoped, being written up. No action is expected from anyone other than the author, and there are no time pressures towards moving from the draft state.</p></li>
+<li><p><strong>Proposed</strong>: ADRs can move to the proposed state once a sponsor has signed up, and the ADR can then start to be socialized within the team / with PMs and with RFCs / RFEs can be scoped in.</p></li>
+<li><p><strong>Reviewing</strong>: Once moved to Reviewing state, the ADR must be brought to the SIG-SRE weekly call for consideration based on feedback already received. An ADR from this stage can either be moved back to the Proposed state, if gaps are identified or conversations need to be closed, or is Accepted / Rejected. And actions as follow-up should be executed.</p></li>
+<li><p><strong>Accepted</strong>: Once an ADR is ‘accepted’, it must be moved into read-only mode and no further changes are allowed.</p></li>
+<li><p><strong>Rejected</strong>: From the reviewing state, it’s possible to move ADRs to a rejected state if they do not align with goals, or if stakeholders have fundamental concerns.</p></li>
+<li><p><strong>Superseded</strong>: ADRs once they move to Accepted state can no longer be changed, since goals and execution is established. Changes would be implemented by replacement ADRs with the previous ADR being moved to ‘superseded’ state, and a comment being added into the ADR metadata itself indicating which ADR now supersedes this specific one. The general pattern to follow is the IETF RFC flow.</p></li>
 </ol>
-<section id="research-phase">
-<h3>Research Phase<a class="headerlink" href="#research-phase" title="Permalink to this headline">#</a></h3>
-<p>The Research Phase consists of two lines of work which result in a SLO proposal agreement between stakeholders.</p>
-<p>Initially, Product Managers, Engineering Managers and SRE representatives will gather business and technical requirements that will inform the subsequent SLO discussions. The types of requirements may include what customer (both internal and external) expectations are for the service in terms of its performance, reliability and durability where applicable. Once the requirements are gathered, product managers and/or engineering leads for the service create a plan to implement the changes. The plan should contain enough details to successfully implement any required changes to the service. The changes might include <a class="reference external" href="https://github.com/operate-first/sre/pulls/8">instrumenting SLIs</a>, the creation of a monitoring dashboard, team policy and procedure changes and so on. The <a class="reference external" href="https://github.com/operate-first/sre/blob/main/ADRs/RH/SIG-SRE/ADR-00006%20SLO%20RACI%20Chart.md">RACI chart</a> can be used as a guide for the Implementation Phase when the work is assigned.</p>
-</section>
-<section id="implementation-phase">
-<h3>Implementation Phase<a class="headerlink" href="#implementation-phase" title="Permalink to this headline">#</a></h3>
-<p>With an accepted proposal from the Research Phase, an owner can be found to implement the changes. Not all of these changes are necessarily made by software engineers. Certainly changes to instrument the service’s codebase is in the domain of the software engineer, but changing team policies and practices is more likely to be the domain of the engineering lead. Remember that the work isn’t intended to be wholly owned by the person to whom it is assigned, that person can and should work in concert with people who can assist. <a class="reference external" href="https://github.com/operate-first/sre/blob/main/ADRs/RH/SIG-SRE/ADR-00006%20SLO%20RACI%20Chart.md">Consider the RACI chart</a> which shows that more than just one role is involved; work as a team to accomplish the goals.</p>
-<p>The owner will likely be an engineer on the service’s team who may work in concert with an appropriate SRE to affect changes to the service and related ecosystem.</p>
-<p>By way of example, some of these changes may include (but not limited to):</p>
-<ul class="simple">
-<li><p>SLI (Service Level Indicator) instrumentation in the service</p>
-<ul>
-<li><p>Software changes</p></li>
-</ul>
-</li>
-<li><p>SLO Dashboard Changes</p>
-<ul>
-<li><p>Creation of SLO Dashboard</p></li>
-<li><p>Changes to existing SLO dashboard to incorporate new changes</p></li>
-</ul>
-</li>
-<li><p>Changes to team policies and practices to support the <a class="reference external" href="#iteration-phase">Iteration Phase</a></p></li>
-</ul>
-</section>
-<section id="iteration-phase">
-<h3>Iteration Phase<a class="headerlink" href="#iteration-phase" title="Permalink to this headline">#</a></h3>
-<p>Once the SLOs are adopted, the <a class="reference external" href="https://github.com/operate-first/sre/blob/main/ADRs/RH/SIG-SRE/ADR-00006%20SLO%20RACI%20Chart.md">service stakeholders</a> will enter the lifecycle loop where the team and service come to live with the SLO. Now the team uses the previous work to instrument and monitor the service. Sprint planning is influenced by the error budget. Existing SLOs are continually evaluated for needed changes, or even their retirement. Changes will want to kick off a new Research Phase to propose and understand the scope of changes.</p>
-<section id="slo-review">
-<h4>SLO Review<a class="headerlink" href="#slo-review" title="Permalink to this headline">#</a></h4>
-<p>Part of healthy SLO adoption is the periodic review of the service’s SLO needs. These review tasks may include:</p>
-<ul class="simple">
-<li><p>Do the service’s SLOs still measure the right thing(s) to measure customer happiness and service reliability?</p>
-<ul>
-<li><p>Do we have direct customer feedback or telemetry from which we can infer customer feedback?</p></li>
-</ul>
-</li>
-<li><p>Are the SLOs’ SLIs still appropriate? Are there newer, better (ex. less computationally expensive) indicators that should be used?</p></li>
-<li><p>Is a SLO still needed? (ex. Does the service landscape or user experience still demand it? Has another SLO superseded it?)</p></li>
-</ul>
-<p>These steps can be used to evaluate the SLOs themselves, but there’s also review on the targets set by the service’s SLO(s):</p>
-<ul class="simple">
-<li><p>Are the service’s SLOs being met?</p>
-<ul>
-<li><p>If they’re not, what are common reasons why not? Identify who is best suited to remediate.</p></li>
-</ul>
-</li>
-<li><p>What are the common reason(s) for risks and observed hits to the error budget?</p>
-<ul>
-<li><p>How can they be mitigated in the future?</p></li>
-</ul>
-</li>
-<li><p>What is the error budget burn rate? Will corrective action be needed at the current rate?</p></li>
-</ul>
-<p>Remember that some of these review steps can be outwardly facing to include external stakeholders such as service consumers within the organization.</p>
-<section id="remediating-slos">
-<h5>Remediating SLOs<a class="headerlink" href="#remediating-slos" title="Permalink to this headline">#</a></h5>
-<p>Sometimes an SLO may fail to be met. In these cases it’s important to perform an investigation to determine what’s causing the failure. Software can be infinitely complex and that means it isn’t possible to list every possible cause, so what follows is a necessarily incomplete set of examples:</p>
-<ul class="simple">
-<li><p>Sometimes the cause might be a result of an upstream quality or reliability issue that needs to be escalated to the team or vendor responsible.</p></li>
-<li><p>Sometimes it may be a result of a defect that was deployed.</p></li>
-<li><p>Sometimes it may be a result of insufficient capacity to meet the needs of the userbase that can be resolved by a capacity planning cycle.</p></li>
-</ul>
-<p>Whatever the cause, the <a class="reference external" href="https://github.com/operate-first/sre/blob/main/ADRs/RH/SIG-SRE/ADR-00006%20SLO%20RACI%20Chart.md">RACI chart</a> can help inform who the responsible parties are for remediation.</p>
-</section>
-</section>
-<section id="sprint-planning-hooks">
-<h4>Sprint Planning Hooks<a class="headerlink" href="#sprint-planning-hooks" title="Permalink to this headline">#</a></h4>
-<p>A primary goal of Service Level Objectives is to inform the natural cycle of work for product feature teams by adding an additional signal for use in planning work. The new signal is the service’s remaining Error Budget.</p>
-<p>The “elevator pitch” flow chart looks like this: If there’s error budget remaining, it’s a green light to focus on features, otherwise, focus on reliability.</p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
-  A(Sprint Planning) --&gt; B{Error Budget&lt;br /&gt;Available?}
-  B --&gt; |Yes|C[Features]
-  B --&gt; |No|D[Reliability]
-  C &amp; D --&gt; E(Prioritise the appropriate work)
-</pre></div>
-</div>
-<p>In reality, however, the error budget is not meant to be the <em>only</em> signal feeding sprint planning; it is merely <em>another</em> signal that can be used to prioritise work. Planning is still up to the team and can focus on features when it makes sense. Sprint planning may look like this with the error budget informing decisions.</p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>  graph TD
-  A(Sprint planning) ---&gt; B[[Review product&lt;br /&gt;roadmap needs]]
-  C[/Remaining error&lt;br /&gt;budget/] -.-&gt;  |Informs|D[[Backlog grooming]] &amp; B
-  B --&gt; D
-  D --&gt; E[[Pull cards&lt;br /&gt;into sprint]]
-  E --&gt; F(Start sprint)
-</pre></div>
-</div>
-<p>A parting thought for this section is to remember the purpose of the Service Level Objective and associated error budget is to model customer satisfaction. Use caution when deprioritizing reliability for features when the error budget is depleted, or projected to become exhausted. Those who are closest to the service will have the best understanding of any impact for delaying reliability enhancements.</p>
-</section>
 </section>
 </section>
 <section id="challenges">
 <h2>Challenges<a class="headerlink" href="#challenges" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Teams may desire to adopt the guidelines in this document but lack the data to do so because they don’t have any SLO, or a way to measure the remaining error budget.</p></li>
-<li><p>Teams may face encounter difficulties scheduling “reliability work” by those who deprioritize it in favour of “feature work.”</p>
-<ul>
-<li><p>Related, teams may not have the throughput to address “reliability work” above “keeping the lights on” work. (See also toil management.)</p></li>
+<li><p>Each existing decisions should be identified and recaptured as Architecture Decision Records (ADR)</p></li>
+<li><p>Since ADRs are numbered at creation time, it is possible that an ADR with a higher number is in effect before an ADR with a lower number. Shouldn’t be a problem as long as they don’t contradict (nor supersede) one another.</p></li>
 </ul>
-</li>
-</ul>
-<p>These challenges could be addressed by a <a class="reference external" href="#permissive-slo-phase">permissive SLO phase</a>.</p>
-<section id="permissive-slo-phase">
-<h3>Permissive SLO Phase<a class="headerlink" href="#permissive-slo-phase" title="Permalink to this headline">#</a></h3>
-<p>Teams may find that adopting this SLO lifecycle challenging for any number of reasons, whether they’re listed in the <a class="reference external" href="#challenges">challenges</a> section or not. For teams that want adopt a lightweight approach to the SLO lifecycle, a “permissive phase” could be helpful.</p>
-<p>Borrowing this terminology from the <a class="reference external" href="https://selinuxproject.org">SELinux Project</a> the team engages in the practice of SLOs, but without any “enforcing” aspect to the lifecycle. This period of permissiveness gives the team a chance to walk alongside the SLO lifecycle without necessarily being lead by the SLO lifecycle.</p>
-<p>Like with SELinux, the most value from the system comes from the “enforcing mode” and the transition from a permissive SLO phase to an “enforcing” phase is where the most value is found. Be sure to include a transition plan during the <a class="reference external" href="#research-phase">Research Phase</a>.</p>
 </section>
+<section id="alternatives-considered">
+<h2>Alternatives Considered<a class="headerlink" href="#alternatives-considered" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Google doc free form documents: are hard to be versioned, searched and made to be immutable</p></li>
+</ul>
 </section>
 <section id="dependencies">
 <h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>The existence of an SLO.</p></li>
-<li><p>Reporting for SLO compliance and error budget exhaustion.</p></li>
-<li><p>Willingness to prioritize “reliability work” over “feature work” when necessary to ensure a continued customer experience.</p></li>
+<li><p><a class="reference internal" href="ADR-00000%20Template.html"><span class="doc std std-doc">[Template] Architecture Decision Record</span></a></p></li>
+<li><p>Architecture Decision Records directory</p></li>
+<li><p>Some materials on the concept of ADR</p>
+<ul>
+<li><p><a class="reference external" href="https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions.html">https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions.html</a></p></li>
+<li><p><a class="reference external" href="https://adr.github.io/">https://adr.github.io/</a></p></li>
+<li><p><a class="reference external" href="https://adr.github.io/madr/">https://adr.github.io/madr/</a></p></li>
+<li><p><a class="reference external" href="https://engineering.atspotify.com/2020/04/14/when-should-i-write-an-architecture-decision-record/">https://engineering.atspotify.com/2020/04/14/when-should-i-write-an-architecture-decision-record/</a></p></li>
+<li><p>Note that we are deviating from these descriptions in some areas (including the template)</p></li>
+</ul>
+</li>
 </ul>
 </section>
 <section id="stakeholders">
 <h2>Stakeholders<a class="headerlink" href="#stakeholders" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Key stakeholders are available in the <a class="reference external" href="https://github.com/operate-first/sre/blob/main/ADRs/RH/SIG-SRE/ADR-00006%20SLO%20RACI%20Chart.md">RACI chart</a>.</p></li>
-<li><p><a class="reference external" href="https://github.com/operate-first/sre/blob/main/ADRs/RH/SIG-SRE/ADR-00002%20Personas%20related%20to%20Managed%20Services.md">Personas described in ADR-00002</a></p></li>
+<li><p>SIG-SRE and other SRE and engineering teams contributing to these ADRs will consume (and generate) these Architecture Decision Records</p></li>
+<li><p>Engineering Management and Product Management personas putting requirements on SRE teams</p></li>
+<li><p>SIG-SRE workstream leads are the caretakers of these Architecture Decision Records and are Approvers of all ADR PRs</p></li>
 </ul>
 </section>
 <section id="consequences-if-not-completed">
 <h2>Consequences if Not Completed<a class="headerlink" href="#consequences-if-not-completed" title="Permalink to this headline">#</a></h2>
-<p>Key consequences for not adopting a SLO lifecycle is that there will continue to be ad-hoc practices if they exist. Teams may not set themselves up for success without adopting a lifecycle for SLOs.</p>
+<ul class="simple">
+<li><p>Ad-hoc decision recording that might be hard to find</p></li>
+<li><p>Non-decisions slowing down the team progress</p></li>
+</ul>
+</section>
+<section id="review-status">
+<h2>Review Status<a class="headerlink" href="#review-status" title="Permalink to this headline">#</a></h2>
+<p>Proposition is circulated to internal stakeholders.</p>
+<p>Status to converge within a week to accept unless concerns are arisen.</p>
 </section>
 </section>
 
@@ -797,17 +725,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="ADR-00004-Chaos-Testing-and-Engineering.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="ADR-00000%20Template.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">ADR-00004 - Chaos Testing &amp; Engineering</p>
+            <p class="prev-next-title">ADR-00000 Template</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="ADR-00006%20SLO%20RACI%20Chart.html" title="next page">
+    <a class='right-next' id="next-link" href="ADR-00002%20Personas%20related%20to%20Managed%20Services.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ADR-00006 SLO RACI Chart</p>
+        <p class="prev-next-title">ADR-00002 Personas related to Managed Services</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>SLO Bootstrap Guide &#8212; Operate First - Site Reliability Engineering</title>
+    <title>Charter &#8212; Operate First - Site Reliability Engineering</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Incident Management Process" href="process/incident_management.html" />
-    <link rel="prev" title="Red Hat SRE coloring book" href="sre-coloring-book/red-hat-sre-coloring-book.html" />
+    <link rel="next" title="Picking Good SLIs" href="picking_good_slis.html" />
+    <link rel="prev" title="Contributing" href="CONTRIBUTING.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -110,7 +110,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="README.html">
-                    Operate First - Site Reliability Engineering
+                    SIG-SRE — the Operate First Site Reliability Engineering Special Interest Group
                 </a>
             </li>
         </ul>
@@ -125,14 +125,29 @@ const thebe_selector_output = ".output, .cell_output"
    Red Hat SRE coloring book
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="slo_bootstrap_guide.html">
    SLO Bootstrap Guide
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="process/incident_management.html">
    Incident Management Process
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sig-roadmap.html">
+   SIG SRE roadmap
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="CONTRIBUTING.html">
+   Contributing
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Charter
   </a>
  </li>
 </ul>
@@ -165,8 +180,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="ADRs/RH/SIG-SRE/README.html">
-   SIG-SRE
+  <a class="reference internal" href="ADRs/RH/README.html">
+   RH
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -207,6 +222,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="ADRs/RH/SIG-SRE/ADR-00007-Error-Budget-Policy.html">
      ADR-00007 Error Budget Policy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ADRs/RH/SIG-SRE/README.html">
+     SIG-SRE
     </a>
    </li>
   </ul>
@@ -313,7 +333,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/operate-first/sre/issues/new?title=Issue%20on%20page%20%2Fslo_bootstrap_guide.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/operate-first/sre/issues/new?title=Issue%20on%20page%20%2Fcharter.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -341,7 +361,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/slo_bootstrap_guide.md"
+        <a href="_sources/charter.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -378,128 +398,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#steps">
-   Steps
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#step-1-familiarise-definitions">
-     Step 1: Familiarise Definitions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#step-2-personas">
-     Step 2: Personas
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#step-3-slo-lifecycle">
-     Step 3: SLO Lifecycle
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#step-3-1-picking-good-slos-and-slis">
-       Step 3.1: Picking Good SLOs and SLIs
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#step-4-raci-chart">
-     Step 4: RACI Chart
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#step-5-slo-reporting">
-     Step 5: SLO Reporting
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>SLO Bootstrap Guide</h1>
+                <h1>Charter</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#steps">
-   Steps
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#step-1-familiarise-definitions">
-     Step 1: Familiarise Definitions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#step-2-personas">
-     Step 2: Personas
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#step-3-slo-lifecycle">
-     Step 3: SLO Lifecycle
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#step-3-1-picking-good-slos-and-slis">
-       Step 3.1: Picking Good SLOs and SLIs
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#step-4-raci-chart">
-     Step 4: RACI Chart
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#step-5-slo-reporting">
-     Step 5: SLO Reporting
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -507,40 +422,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="slo-bootstrap-guide">
-<h1>SLO Bootstrap Guide<a class="headerlink" href="#slo-bootstrap-guide" title="Permalink to this headline">#</a></h1>
-<p>Red Hat’s SIG-SRE group has created a set of documents which share how some teams engage with the practice of SLOs inside Red Hat. This guide is meant to be a self-contained bootstrapping guide for teams looking to use the site reliability engineering approach to supporting services. It is our hope that these supporting documents can assist others. Before we get started, there are some <a class="reference external" href="#step-1-familiarise-definitions">definitions</a> to ensure common understanding of terms and phrases that are used throughout the package.</p>
-<section id="steps">
-<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">#</a></h2>
-<section id="step-1-familiarise-definitions">
-<h3>Step 1: Familiarise Definitions<a class="headerlink" href="#step-1-familiarise-definitions" title="Permalink to this headline">#</a></h3>
-<p><strong>Service Level Objective (SLO)</strong> - A Service Level Objective is a specific, measurable target to express the level of service provided to a service’s customers, be they internal or external. These <strong>objectives</strong> can be focused on a particular aspect of the service, such as a specific API endpoint.</p>
-<p><strong>Service Level Indicator (SLI)</strong> - A Service Level Indicator (SLI) is a specific metric that is used to measure against the objective. These <strong>indicators</strong> may be exposed through the service (“white box”) itself or measured in a way that is external to the service (“black box”).</p>
-<p><strong>Service Level Agreement (SLA)</strong> - A Service Level Agreement is similar to a <strong>SLO</strong>, but is usually a legal document which imposes financial obligations from the service provider to their customers when the agreed service performance target is unmet.</p>
-<p><strong>Persona</strong> - Throughout these documents, the word “persona” is used to describe a kind of person who holds a specific role within a team or organisation. See also <a class="reference external" href="https://github.com/operate-first/sre/blob/main/ADRs/RH/SIG-SRE/ADR-00002%20Personas%20related%20to%20Managed%20Services.md">Personas Related to Managed Services</a>.</p>
-<p><strong>Service</strong> - A service is a discrete software that is providing some value to customers (internal or external).</p>
-</section>
-<section id="step-2-personas">
-<h3>Step 2: Personas<a class="headerlink" href="#step-2-personas" title="Permalink to this headline">#</a></h3>
-<p>The first document to familiarise with, aside from this one, is the <a class="reference external" href="https://github.com/operate-first/sre/blob/main/ADRs/RH/SIG-SRE/ADR-00002%20Personas%20related%20to%20Managed%20Services.md">Personas Related to Managed Services</a>. Many of the other documents make reference to the described personas.</p>
-</section>
-<section id="step-3-slo-lifecycle">
-<h3>Step 3: SLO Lifecycle<a class="headerlink" href="#step-3-slo-lifecycle" title="Permalink to this headline">#</a></h3>
-<p>After reviewing the personas, the <a class="reference external" href="https://github.com/operate-first/sre/blob/main/ADRs/RH/SIG-SRE/ADR-00005%20SLO%20Lifecycle.md">SLO Lifecycle</a> document describes the three phases of living with SLOs: Research, for SLO ideation and gap analysis; Implementation, where changes to a service’s codebase and service team’s processes change to support the SLO; Iteration, for any changes to the SLO or processes after implementation. It is important to know that SLOs are living things and can (and should) be adapted to the team’s lived experiences.</p>
-<section id="step-3-1-picking-good-slos-and-slis">
-<h4>Step 3.1: Picking Good SLOs and SLIs<a class="headerlink" href="#step-3-1-picking-good-slos-and-slis" title="Permalink to this headline">#</a></h4>
-<p>Two documents directly relate to the SLO Lifecycle’s Research phase: <a class="reference external" href="https://github.com/operate-first/sre/blob/main/picking_good_slis.md">Picking Good SLIs</a> and <a class="reference external" href="https://github.com/operate-first/sre/blob/main/picking_good_slos.md">Picking Good SLOs</a>. A third document supports the Iteration phase as it describes <a class="reference external" href="https://github.com/operate-first/sre/blob/main/ADRs/RH/SIG-SRE/ADR-00007-Error-Budget-Policy.md">Error Budget Policy</a>.</p>
-</section>
-</section>
-<section id="step-4-raci-chart">
-<h3>Step 4: RACI Chart<a class="headerlink" href="#step-4-raci-chart" title="Permalink to this headline">#</a></h3>
-<p>The SLO Lifecycle document suggests a number of responsibilities for various personas and the <a class="reference external" href="https://github.com/operate-first/sre/blob/main/ADRs/RH/SIG-SRE/ADR-00006%20SLO%20RACI%20Chart.md">SLO RACI Chart</a> aims to be a quick reference for who is responsible for what using a <a class="reference external" href="https://en.wikipedia.org/wiki/Responsibility_assignment_matrix">responsibility assignment matrix pattern</a>.</p>
-</section>
-<section id="step-5-slo-reporting">
-<h3>Step 5: SLO Reporting<a class="headerlink" href="#step-5-slo-reporting" title="Permalink to this headline">#</a></h3>
-<p>Finally, the <a class="reference external" href="https://docs.google.com/document/d/1W1jf9ov_AZzKU_cyqPMu_pSzsJhRlfiPjtXmN0ZPt-k/edit">SLO Reporting document</a> can be an aid for reporting on the SLO hits and misses to key external stakeholders.</p>
-</section>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="charter">
+<h1>Charter<a class="headerlink" href="#charter" title="Permalink to this headline">#</a></h1>
 </section>
 
     <script type="text/x-thebe-config">
@@ -570,17 +453,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="sre-coloring-book/red-hat-sre-coloring-book.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="CONTRIBUTING.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Red Hat SRE coloring book</p>
+            <p class="prev-next-title">Contributing</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="process/incident_management.html" title="next page">
+    <a class='right-next' id="next-link" href="picking_good_slis.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Incident Management Process</p>
+        <p class="prev-next-title">Picking Good SLIs</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
